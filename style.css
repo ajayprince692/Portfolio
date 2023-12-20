@@ -17,6 +17,16 @@ body {
     rgb(20, 20, 20) 291px
   );
   color: aliceblue;
+  animation: colorPulse 3s infinite alternate; /* Color pulse animation */
+}
+
+@keyframes colorPulse {
+  from {
+    filter: brightness(1);
+  }
+  to {
+    filter: brightness(1.2);
+  }
 }
 
 header {
@@ -28,6 +38,16 @@ header {
   color: rgb(0, 0, 0);
   text-align: center;
   padding: 1em 0;
+  animation: fadeIn 1s ease; /* Fade-in animation */
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 section {
@@ -40,19 +60,41 @@ section {
     rgb(167, 167, 167)
   );
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  border-radius: 8px; /* Optional: Add rounded corners */
+  border-radius: 8px;
+  animation: slideIn 1s ease; /* Slide-in animation */
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-80px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 h2 {
   color: #333;
   font-weight: bold;
+  animation: colorChange 0.5s ease infinite alternate; /* Color change animation */
+}
+
+@keyframes colorChange {
+  from {
+    color: #000000;
+  }
+  to {
+    color: #2a65b8;
+  }
 }
 
 p {
   color: #bbb5b5;
-  font-size: 16px; /* Adjust font size for better readability */
-  text-align: left; /* Align project details to the left */
-  margin-top: 10px; /* Add some space between image and project details */
+  font-size: 16px;
+  text-align: left;
+  margin-top: 10px;
 }
 
 #port {
@@ -108,33 +150,60 @@ label {
 }
 
 .project {
-  max-width: 300px; /* Set the maximum width for the project container */
-  margin: 20px auto; /* Center the project container */
-  display: flex; /* Use flexbox */
-  flex-direction: column; /* Stack child elements vertically */
-  align-items: center; /* Center child elements horizontally */
+  max-width: 300px; 
+  margin: 20px auto; 
+  display: flex; 
+  flex-direction: column; 
+  align-items: center; 
 }
 
 .project img {
-  width: 100%; /* Make the image take up 100% of the container width */
-  height: auto; /* Maintain the aspect ratio of the image */
-  border-radius: 8px solid black; /* Optional: Add rounded corners to the image */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Optional: Add a subtle box shadow */
-
+  width: 100%;
+  height: auto;
+  border-radius: 8px solid black;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  animation: slideRight .4s ease forwards;
 }
-#pic{
+
+#pic {
   width: 100px;
   border-radius: 50%;
-  
 }
+
 #btn {
   background-color: rgb(56, 42, 165);
+  animation: scaleUp 0.3s ease; 
 }
-#btn:hover{
+
+#btn:hover {
   background-color: red;
-}
-#p1{
-  color: bisque;
+  animation: shake 0.5s ease infinite; 
 }
 
+@keyframes scaleUp {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.1);
+  }
+}
 
+@keyframes shake {
+  from,
+  to {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-5px);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+  75% {
+    transform: translateX(-5px);
+  }
+}
+#p1 {
+  color: rgb(172, 96, 2);
+}
