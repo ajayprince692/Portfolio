@@ -76,9 +76,9 @@ section {
 }
 
 h2 {
-  color: #333;
+  color: #333333;
   font-weight: bold;
-  animation: colorChange 0.5s ease infinite alternate; /* Color change animation */
+  animation: colorChange 1s ease infinite alternate; /* Color change animation */
 }
 
 @keyframes colorChange {
@@ -86,7 +86,7 @@ h2 {
     color: #000000;
   }
   to {
-    color: #2a65b8;
+    color: #b82a2a;
   }
 }
 
@@ -172,7 +172,7 @@ label {
 
 #btn {
   background-color: rgb(56, 42, 165);
-  animation: scaleUp 0.3s ease; 
+  animation: scaleUp 0.3s ease;
 }
 
 #btn:hover {
